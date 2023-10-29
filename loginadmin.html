@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/bootstrap.min.js"> </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ffffff;
+            border-radius: 3px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #242424;
+            color: #4e4e4e;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #ff9811;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>เข้าสู่ระบบ</h2>
+        <a action="process_login.php" method="post">
+            <div class="form-group">
+                <label for="username">ชื่อผู้ใช้:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <a href="user.html"><button type="submit" class="login-button">Login</button></a>
+            <a href="home.html" style="font-size: 10px;">กลับสู่หน้าหลัก</a>
+            <a href="home.html" style="font-size: 10px;">ลืมรหัสผ่าน</a>
+        </form>
+    </div>
+</body>
+</html>

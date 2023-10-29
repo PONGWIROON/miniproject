@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserPage</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="MenuS.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+  
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-start">
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      </div>
+        
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+         
+          <li><a href="home.html" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="feature.html" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="about.html" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+         <a class="text-end">
+
+
+          
+         
+      </div>
+    </div>
+   
+  </header>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="about.html">About</a>
+    <a href="Servicet.html">Services</a>
+    <a href="home.html">Log out</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="container my-5">
+    <div class="bg-body-tertiary p-5 rounded">
+      <div class="col-sm-8 py-5 mx-auto">
+        <h1 class="display-5 fw-normal"> Join Us for Daily Workouts!</h1>
+        <p class="fs-5"> Dear Valued Subscribers,</p>
+        <p>We hope you enjoy our subscription, and we are now ready to allow you to book our workout for today. Please check it out by clicking the button below."</p>
+        <p>
+          <a class="btn btn-primary" href="userbook.html" role="button">Booking to our workout for today now! »</a>
+        </p>
+    </div>
+    </div>
+  </div>
+  
+    
+  <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+ </script>
+ 
+</body>
+</html>
+
+
+  

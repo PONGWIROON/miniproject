@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserBooking</title>
+</head>
+<html>
+<head>
+<style>
+  body {
+    background-color: rgb(70, 66, 66);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Add top margin for spacing */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(72, 72, 72, 0.8); /* Slightly transparent black background */
+  }
+
+  table, th, td {
+    border: 1px solid white;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5); /* Increase checkbox size for better visibility */
+  }
+
+  h2 {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h2>Workout schedule for today.</h2>
+
+<table>
+  <tr>
+    <th>Select</th>
+    <th>Time</th>
+    <th>Activity</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="workoutTime" value="9:00 AM"></td>
+    <td>9:00 AM</td>
+    <td>Yoga</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="workoutTime" value="10:30 AM"></td>
+    <td>10:30 AM</td>
+    <td>BodyCombat</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="workoutTime" value="12:00 PM"></td>
+    <td>12:00 PM</td>
+    <td>Cardio</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="workoutTime" value="12:00 PM"></td>
+    <td>12:00 PM</td>
+    <td>Cardio</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="workoutTime" value="12:00 PM"></td>
+    <td>12:00 PM</td>
+    <td>Cardio</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="workoutTime" value="12:00 PM"></td>
+    <td>12:00 PM</td>
+    <td>Cardio</td>
+  </tr>
+  <!-- Add more rows for other workout times and activities -->
+</table>
+
+<!-- Add Confirm and Edit buttons -->
+<div>
+    <br><br/>
+    <button id="confirmButton" style="margin-right: 20px; background-color: green; color: white;">Confirm</button>
+    <button id="editButton" style="background-color: blue; color: white;">Edit</button>
+</div>
+
+
+<script>
+    // JavaScript to handle Confirm and Edit buttons
+    const confirmButton = document.getElementById('confirmButton');
+    const editButton = document.getElementById('editButton');
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    confirmButton.addEventListener('click', () => {
+        // Create an array to store the selected workouts
+        const selectedWorkouts = [];
+
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                // If a checkbox is checked, add its value to the selectedWorkouts array
+                selectedWorkouts.push(checkbox.value);
+            }
+        });
+
+        // Send the selectedWorkouts array to a PHP script for database storage using AJAX.
+        // Replace 'your_php_script.php' with the actual PHP script's URL.
+        // You can use libraries like Axios or fetch API for this purpose.
+        // For demonstration, we'll just alert the selected workouts.
+        alert('Selected Workouts: ' + selectedWorkouts.join(', '));
+    });
+
+    editButton.addEventListener('click', () => {
+        // Implement your editing functionality here, e.g., showing/hiding checkboxes for editing.
+        alert('Editing functionality goes here.');
+    });
+</script>
+
+</body>
+</html>
